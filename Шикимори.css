@@ -1,0 +1,135 @@
+/* Основная страница */
+  /* Новый интерфейс */
+@import url("https://raw.githubusercontent.com/INFERN028/Rewritten-code-1/main/1.css?token=GHSAT0AAAAAABTFTYGQWLEPHDJL4VSA5DU4YSJ2FDA");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_2.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_3.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_4mob.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/q03_history_bookmarks.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/q04_mark_module_for_posters.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/q08_alter_sitemenu.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/cosmo-library/q10-04_quick-access-panel_0.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/cosmo-library/q10-05_slider_0.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/cosmo-library/q10-06_mega-slider_0.css");
+body:after {
+  /* задний фон */
+  background-image: url("https://i.ibb.co/89fxVfC/back.jpg");
+}
+ /* Что-то для фона */
+.l-footer:after {
+  content: "*Gray Silence*";
+  display: none !important;
+}
+@media screen and (min-width: 1px) {
+.correct-mob-version {
+    color: normal;
+}
+.shikista {
+  color: white;
+}
+  /* Настройка цвета */
+@media screen and (min-width: 1px) {
+  html:root {
+    --white-color: 255, 255, 255;
+    --light-color: 191, 197, 208;
+    --dark-color: 159, 169, 181;
+    --bright-color: 173, 191, 222;
+    --dull-color: 111, 123, 125;
+    --input-color: 100, 106, 115;
+    --hover-bottoms-1: 35, 37, 43;
+    --buttoms-color: 67, 82, 101;
+    --hover-buttoms-2: 156, 98, 25;
+    --very-high-rating: 144, 159, 179;
+    --high-rating: 108, 130, 146;
+    --average-rating: 83, 99, 115;
+    --small-rating: 57, 67, 78;
+    --time-filled: 74, 91, 103;
+    --time-empty: 28, 30, 33;
+    --anime-inprocess: 69, 146, 76;
+    --anime-complete: 41, 107, 47;
+    --manga-inprocess: 189, 15, 86;
+    --manga-complete: 153, 0, 62;
+    --hover-color: 210, 137, 45;
+    --shadows-color: 121, 140, 171;
+    --block-color: 65, 71, 82;
+    --menu-back: 40, 43, 49;
+    --nick-cover: 81, 94, 103;
+    --popup-color: 57, 63, 72;
+    --hundred: 1;
+}
+  /* Цвет блока "Достижения" */
+.p-profiles-show .achievements .header {
+	box-shadow: 0 2px 6px 2px rgba(var(--block-color), 0.8);
+	border: 2px solid;
+	border-radius: 10px;
+	border-color: #2b5a33; 
+}
+    /* Мини гифка */
+.l-top_menu-v2 .logo-container .glyph {
+  display: block;
+  order: 1;
+  width: 48px;
+  height: 48px;
+  margin: 0 0 0 6px;
+  background: url(https://emoji.gg/assets/emoji/9827_jojo_menacing_1.gif) center / cover;
+}
+   /* Свет кнопок */
+.l-top_menu-v2 .submenu > a:hover,
+.l-top_menu-v2 .menu-dropdown > button:not(.mobile):hover,
+.l-top_menu-v2 .menu-dropdown > button:not(.mobile) a:hover {
+  box-shadow: 0 0 20px rgba(255,117,56,.5),
+              0 0 20px rgba(255,117,20,1) inset;
+  transition: 0.3s;
+}
+  /* Изменение цвета шкалы времени за просмотром аниме */
+.b-stats_bar .bar .third { background: #aaa; color: black; font-size: 12px; font-weight: bold;}
+.b-stats_bar.lifetime .bar .first { background: #2b5a33; }
+.b-stats_bar.lifetime .bar .third { background: #470a0a; }
+var scroll_bottom = 0;
+$(".b-to-top").css("z-index", "10");
+}
+   /* Png.хрень в углу */
+.p-profiles-show .b-feedback:after {
+  content: ''; 
+  display: inline-block; 
+  position: fixed;
+  width: 300px; 
+  height: 300px; 
+  right: 15px; 
+  bottom: 0px; 
+  background: url("https://pngimg.com/uploads/anime_girl/anime_girl_PNG28.png") no-repeat;
+  background-size: cover;  
+  z-index: 10;                 
+  pointer-events: none; 
+}
+/* История */
+  /* Дата в истории */
+@import url(https://raw.githubusercontent.com/kaurkaur/Shikimori/master/CSS/HistoryDates.css);
+} 
+.history-page a[href ^= "/a"]:before {
+  content: '[Аниме] ';
+  color: #34a853;
+}
+.history-page a[href ^= "/m"]:before {
+  content: '[Манга] ';
+  color: #9c27b0;
+}
+.history-page a[href ^= "/r"]:before {
+  content: '[Ранобэ] ';
+  color: #039be5;
+}
+[data-locale="en"] .history-page a[href ^= "/a"]:before {
+  content: '[Anime] ';
+}
+[data-locale="en"] .history-page a[href ^= "/m"]:before {
+  content: '[Manga] ';
+}
+[data-locale="en"] .history-page a[href ^= "/r"]:before {
+  content: '[Ranobe] ';
+}
+  /* Блокировка рекламы */
+.spns_yd_240x600,
+.spns_yd_970x90,
+.spns_yd_300x600
+{ display: none }
+}
+  
