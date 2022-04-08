@@ -1,6 +1,6 @@
 /* Основная страница */
   /* Новый интерфейс */
-@import url("https://raw.githubusercontent.com/INFERN028/Rewritten-code-1/main/1.css?token=GHSAT0AAAAAABTFTYGQWLEPHDJL4VSA5DU4YSJ2FDA");
+@import url("https://raw.githubusercontent.com/INFERN028/1/main/Code-1.css");
 @import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_2.css");
 @import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_3.css");
 @import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_4mob.css");
@@ -132,4 +132,7 @@ $(".b-to-top").css("z-index", "10");
 .spns_yd_300x600
 { display: none }
 }
-  
+
+
+@import url(https://css-club.web.app/css/u-carousel.css);
+}
