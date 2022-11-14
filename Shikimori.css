@@ -1,138 +1,225 @@
-/* Основная страница */
-  /* Новый интерфейс */
-@import url("https://raw.githubusercontent.com/INFERN028/1/main/Code-1.css");
-@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_2.css");
-@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_3.css");
-@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_4mob.css");
-@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/q03_history_bookmarks.css");
-@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/q04_mark_module_for_posters.css");
-@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/q08_alter_sitemenu.css");
-@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/cosmo-library/q10-04_quick-access-panel_0.css");
-@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/cosmo-library/q10-05_slider_0.css");
-@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/cosmo-library/q10-06_mega-slider_0.css");
-body:after {
-  /* задний фон */
-  background-image: url("https://i.ibb.co/89fxVfC/back.jpg");
+ /* Прогресс бар (нужен BBcode) */
+.fish strong + em {
+  position: relative;
+  height: 27px;
+  border: 0;
+  padding: 3px;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  opacity: 0.8; /*убрать прозрачность (не стоит задирать, а то видны будут переходы и косяки)*/
 }
- /* Что-то для фона */
-.l-footer:after {
-  content: "*Gray Silence*";
-  display: none !important;
+.fish strong + em:hover {
+  z-index: 99;
 }
-@media screen and (min-width: 1px) {
-.correct-mob-version {
-    color: normal;
+.fish strong + em > br {
+  display: none;
 }
-.shikista {
-  color: white;
+  /* Прогресс бар - деления */
+.fish strong + em > a.b-link,
+.fish strong + em > strong {
+  line-height: 1.65; /* Высота строки равна высоте делений */
+  float: left;
+  position: relative;
+  width: calc((100% * 1) / 17);
+  height: 100%;
+  margin-right: 3px; /* отступ между делениями, желательно равный padding у Прогресс бара */
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
 }
-  /* Настройка цвета */
-@media screen and (min-width: 1px) {
-  html:root {
-    --white-color: 255, 255, 255;
-    --light-color: 191, 197, 208;
-    --dark-color: 159, 169, 181;
-    --bright-color: 173, 191, 222;
-    --dull-color: 111, 123, 125;
-    --input-color: 100, 106, 115;
-    --hover-bottoms-1: 35, 37, 43;
-    --buttoms-color: 67, 82, 101;
-    --hover-buttoms-2: 156, 98, 25;
-    --very-high-rating: 144, 159, 179;
-    --high-rating: 108, 130, 146;
-    --average-rating: 83, 99, 115;
-    --small-rating: 57, 67, 78;
-    --time-filled: 74, 91, 103;
-    --time-empty: 28, 30, 33;
-    --anime-inprocess: 69, 146, 76;
-    --anime-complete: 41, 107, 47;
-    --manga-inprocess: 189, 15, 86;
-    --manga-complete: 153, 0, 62;
-    --hover-color: 210, 137, 45;
-    --shadows-color: 121, 140, 171;
-    --block-color: 65, 71, 82;
-    --menu-back: 40, 43, 49;
-    --nick-cover: 81, 94, 103;
-    --popup-color: 57, 63, 72;
-    --hundred: 1;
+.fish strong + em > a.b-link:last-child,
+.fish strong + em > strong:last-child {
+  margin-right: 0;
 }
-  /* Цвет блока "Достижения" */
-.p-profiles-show .achievements .header {
-	box-shadow: 0 2px 6px 2px rgba(var(--block-color), 0.8);
-	border: 2px solid;
-	border-radius: 10px;
-	border-color: #2b5a33; 
+  /* Прогресс бар - заполненные деления-ссылки */
+.fish strong + em > a.b-link,
+.fish strong + em > a.b-link:not(:first-child) {
+  cursor: pointer;
+  color: #acb1b4!important;
 }
-    /* Мини гифка */
-.l-top_menu-v2 .logo-container .glyph {
+.fish strong + em > a.b-link:hover,
+.fish strong + em > a.b-link:not(:first-child):hover {
+  background-color: #363052;
+  color: #c8cfd5!important;
+}
+  /* Прогресс бар - пустые деления */
+.fish strong + em > strong {
+  background: #3f4244;
+  font-size: 0;
+}
+.fish strong + em > strong:after,
+.fish strong + em > a.b-link:not(:first-child):after {
+  content: "";
   display: block;
-  order: 1;
-  width: 48px;
-  height: 48px;
-  margin: 0 0 0 6px;
-  background: url(https://emoji.gg/assets/emoji/9827_jojo_menacing_1.gif) center / cover;
-}
-   /* Свет кнопок */
-.l-top_menu-v2 .submenu > a:hover,
-.l-top_menu-v2 .menu-dropdown > button:not(.mobile):hover,
-.l-top_menu-v2 .menu-dropdown > button:not(.mobile) a:hover {
-  box-shadow: 0 0 20px rgba(255,117,56,.5),
-              0 0 20px rgba(255,117,20,1) inset;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  margin: auto 0;   
+  transform: rotate(45deg);
   transition: 0.3s;
+  outline: 4px solid
 }
-  /* Изменение цвета шкалы времени за просмотром аниме */
-.b-stats_bar .bar .third { background: #aaa; color: black; font-size: 12px; font-weight: bold;}
-.b-stats_bar.lifetime .bar .first { background: #2b5a33; }
-.b-stats_bar.lifetime .bar .third { background: #470a0a; }
-var scroll_bottom = 0;
-$(".b-to-top").css("z-index", "10");
+.fish strong + em > strong:after {
+  background: inherit;
+  outline-color: #171717;
 }
-   /* Png.хрень в углу */
-.p-profiles-show .b-feedback:after {
-  content: ''; 
-  display: inline-block; 
-  position: fixed;
-  width: 300px; 
-  height: 300px; 
-  right: 15px; 
-  bottom: 0px; 
-  background: url("https://pngimg.com/uploads/anime_girl/anime_girl_PNG28.png") no-repeat;
-  background-size: cover;  
-  z-index: 10;                 
-  pointer-events: none; 
+.fish strong + em > a.b-link:not(:first-child):after {
+  outline-color: #171717;
 }
-/* История */
-  /* Дата в истории */
-@import url(https://raw.githubusercontent.com/kaurkaur/Shikimori/master/CSS/HistoryDates.css);
-} 
-.history-page a[href ^= "/a"]:before {
-  content: '[Аниме] ';
-  color: #34a853;
+.fish strong + em > a.b-link:last-of-type + strong:after,
+.fish strong + em > a.b-link:not(:first-child):after,
+.fish strong + em > a.b-link {
+  background-color: #232323;
 }
-.history-page a[href ^= "/m"]:before {
-  content: '[Манга] ';
-  color: #9c27b0;
+.fish strong + em > a.b-link:hover + a.b-link:after,
+.fish strong + em > a.b-link:last-of-type:hover + strong:after {
+  background-color: #363052;
 }
-.history-page a[href ^= "/r"]:before {
-  content: '[Ранобэ] ';
-  color: #039be5;
+  /* Всплывающие подсказки */
+.fish strong + em > a.b-link u,
+.fish strong + em > a.b-link > del {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  left: -1000%;
+  right: -1000%;
+  bottom: 0;
+  width: 150px;
+  padding: 5px;
+  margin: auto;
+  background-color: #222021;
+  box-shadow: 0 2px 4px #0000003d;
+  color: #bbb;
+  font-size: 14px;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: none;
 }
-[data-locale="en"] .history-page a[href ^= "/a"]:before {
-  content: '[Anime] ';
+  /* Всплывающие подсказки - появление */
+.fish strong + em > a.b-link:hover > del,
+.fish strong + em > a.b-link:hover > u {
+  opacity: 1;
+  transition: 0.3s;
+  z-index: 100;
 }
-[data-locale="en"] .history-page a[href ^= "/m"]:before {
-  content: '[Manga] ';
+.fish strong + em > a.b-link:hover > del {
+  bottom: -46px;
 }
-[data-locale="en"] .history-page a[href ^= "/r"]:before {
-  content: '[Ranobe] ';
+.fish strong + em > a.b-link:hover > u {
+  bottom: 36px;
 }
-  /* Блокировка рекламы */
-.spns_yd_240x600,
-.spns_yd_970x90,
-.spns_yd_300x600
-{ display: none }
+  /* Прогресс бар - Clearfix */
+.fish strong + em:after {
+  content: "";
+  display: block;
+  clear: both;
 }
-
-
-@import url(https://css-club.web.app/css/u-carousel.css);
+  /* Всплывающие подсказки - первая подсказка липнет к левому краю */
+.fish strong + em > a.b-link:first-child > u,
+.fish strong + em > a.b-link:first-child > del {
+  left: 0;
+  right: auto;
+}
+  /* Всплывающие подсказки - последняя подсказка липнет к правому краю */
+.fish strong + em > a.b-link:last-child > u,
+.fish strong + em > a.b-link:last-child > del {
+  right: 0;
+  left: auto;
+}
+.fish strong + em > a.b-link:not(:first-child) {
+  padding-left: 1rem;
+}
+.fish strong + em > a.b-link:nth-child(1),
+.fish strong + em > strong:nth-child(1) {
+  z-index: 20;
+  border-radius: 2rem 0 0 2rem;
+}
+.fish strong + em > a.b-link:nth-child(2),
+.fish strong + em > strong:nth-child(2) {
+  z-index: 19;
+}
+.fish strong + em > a.b-link:nth-child(3),
+.fish strong + em > strong:nth-child(3) {
+  z-index: 18;
+}
+.fish strong + em > a.b-link:nth-child(4),
+.fish strong + em > strong:nth-child(4) {
+  z-index: 17;
+}
+.fish strong + em > a.b-link:nth-child(5),
+.fish strong + em > strong:nth-child(5) {
+  z-index: 16;
+}
+.fish strong + em > a.b-link:nth-child(6),
+.fish strong + em > strong:nth-child(6) {
+  z-index: 15;
+}
+.fish strong + em > a.b-link:nth-child(7),
+.fish strong + em > strong:nth-child(7) {
+  z-index: 14;
+}
+.fish strong + em > a.b-link:nth-child(8),
+.fish strong + em > strong:nth-child(8) {
+  z-index: 13;
+}
+.fish strong + em > a.b-link:nth-child(9),
+.fish strong + em > strong:nth-child(9) {
+  z-index: 12;
+}
+.fish strong + em > a.b-link:nth-child(10),
+.fish strong + em > strong:nth-child(10) {
+  z-index: 11;
+}
+.fish strong + em > a.b-link:nth-child(11),
+.fish strong + em > strong:nth-child(11) {
+  z-index: 10;
+}
+.fish strong + em > a.b-link:nth-child(12),
+.fish strong + em > strong:nth-child(12) {
+  z-index: 9;
+}
+.fish strong + em > a.b-link:nth-child(13),
+.fish strong + em > strong:nth-child(13) {
+  z-index: 8;
+}
+.fish strong + em > a.b-link:nth-child(14),
+.fish strong + em > strong:nth-child(14) {
+  z-index: 7;
+}
+.fish strong + em > a.b-link:nth-child(15),
+.fish strong + em > strong:nth-child(15) {
+  z-index: 6;
+}
+.fish strong + em > a.b-link:nth-child(16),
+.fish strong + em > strong:nth-child(16) {
+  z-index: 5;
+}
+.fish strong + em > a.b-link:nth-child(17),
+.fish strong + em > strong:nth-child(17) {
+  z-index: 4;
+}
+.fish strong + em > a.b-link:nth-child(18),
+.fish strong + em > strong:nth-child(18) {
+  z-index: 3;
+}
+.fish strong + em > a.b-link:nth-child(19),
+.fish strong + em > strong:nth-child(19) {
+  z-index: 2;
+}
+.fish strong + em > a.b-link:nth-child(20),
+.fish strong + em > strong:nth-child(20) {
+  z-index: 1;
+}
+.fish strong + em > a.b-link:last-child,
+.fish strong + em > strong:last-child {
+  margin-right: 0;
+  border-radius: 0 2rem 2rem 0;
 }
